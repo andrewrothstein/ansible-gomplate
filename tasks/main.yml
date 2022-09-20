@@ -1,0 +1,26 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: downloading {{ gomplate_url }} to {{ gomplate_install_exe }}
+  become: true
+  become_user: root
+  get_url:
+    url: '{{ gomplate_url }}'
+    dest: '{{ gomplate_install_exe }}'
+    checksum: '{{ gomplate_checksum }}'
+    mode: 0755
+- name: linking {{ gomplate_link }} to {{ gomplate_install_exe }}
+  become: true
+  become_user: root
+  file:
+    src: '{{ gomplate_install_exe }}'
+    dest: '{{ gomplate_link }}'
+    state: link

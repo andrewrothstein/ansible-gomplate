@@ -1,0 +1,9 @@
+---
+# vars file for gomplate
+gomplate_os: '{{ ansible_system | lower }}'
+gomplate_arch: '{{ gomplate_arch_map[ansible_architecture] }}'
+gomplate_platform: '{{ gomplate_os }}-{{ gomplate_arch }}{% if gomplate_slim %}-slim{% endif %}'
+gomplate_url: '{{ gomplate_mirror }}/v{{ gomplate_ver }}/gomplate_{{ gomplate_platform }}{{ gomplate_dotexe | default("") }}'
+gomplate_checksum: '{{ gomplate_checksums[gomplate_ver][gomplate_platform] }}'
+gomplate_install_exe: '{{ gomplate_install_dir }}/gomplate_{{ gomplate_ver }}_{{ gomplate_platform }}{{ gomplate_dotexe | default("") }}'
+gomplate_link: '{{ gomplate_install_dir }}/gomplate'

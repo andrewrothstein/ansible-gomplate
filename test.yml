@@ -1,0 +1,10 @@
+---
+- hosts: all
+  roles:
+  - role: '{{ playbook_dir }}'
+  tasks:
+  - command: /usr/local/bin/gomplate --version
+    register: gomplate_test_output
+  - name: gomplate --version
+    debug:
+      msg: '{{ gomplate_test_output.stdout }}'
