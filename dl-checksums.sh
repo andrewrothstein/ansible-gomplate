@@ -49,4 +49,4 @@ dl_ver() {
     dl $ver windows amd64-slim .exe
 }
 
-dl_ver ${1:-3.11.3}
+dl_ver ${1:-3.11.6}
