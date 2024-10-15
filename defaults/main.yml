@@ -1,7 +1,7 @@
 ---
 # defaults file for gomplate
-gomplate_ver: 3.11.6
-gomplate_slim: true
+gomplate_ver: 4.1.0
+gomplate_slim: false
 gomplate_arch_map:
   386: 386
   aarch64: arm64
@@ -156,3 +156,27 @@ gomplate_checksums:
     darwin-amd64-slim: sha256:fd5a8eb63e22d5d3a62bfb29da03a7d72d6c77474b89a2779b6b8ce0389cdc87
     # https://github.com/hairyhenderson/gomplate/releases/download/v3.11.6/gomplate_windows-amd64-slim.exe
     windows-amd64-slim: sha256:aa1ea9fc744671e5cb45e9aee63cfd5314a7c7bf86a01320bee3c15b2072cf9c
+  # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/checksums-v4.1.0_sha256.txt
+  '4.1.0':
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_freebsd-amd64
+    freebsd-amd64: sha256:b1abb44cc82525676815cb9e9f47b5a5c74b278b26685a8052312d5ac4d68f28
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_linux-amd64
+    linux-amd64: sha256:0f5c89747e6b838cc5b7e8371eda0582388edebf7a4878e84de92a7f4a7f82a6
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_linux-386
+    linux-386: sha256:af67af52de15af5c206a465121d9700a8bdb6712c580cae8f1ae921d63a7fe8c
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_linux-armv6
+    linux-armv6: sha256:f042abe7ccf0ab63739802a63788800ef3472096b6d893be0ac6b4dee2780547
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_linux-armv7
+    linux-armv7: sha256:99073166e81665078bf22e5db40ace6f61389e326333ff5fb636a306141fd9a1
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_linux-arm64
+    linux-arm64: sha256:3e75d4481f518cdfc268245e0dc0cac0e8779d286e70833a94bc9bf5b9fdbefc
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_darwin-amd64
+    darwin-amd64: sha256:7a8ae83654195d5ad516bd4bbe44bb671de8c7a89b440573adc648daf475ea64
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_darwin-arm64
+    darwin-arm64: sha256:832877a831cc91df5a4a86ac44c72a32bb98bdfc4d27e01eeb67a209d60631ab
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_solaris-amd64
+    solaris-amd64: sha256:71ea58a0fc6252edc3b413c694bc980ccd2111b8d9a6773f625af6ea566130f9
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_windows-amd64.exe
+    windows-amd64: sha256:55d53b71f9f84a32315fd9c0a8b0db629db5becbcf2d85dac9afd2393db2a08f
+    # https://github.com/hairyhenderson/gomplate/releases/download/v4.1.0/gomplate_windows-386.exe
+    windows-386: sha256:452bf0093257198871bc9f1e5b5b0991bab933242585835f5abcccd4d3fbc1c4

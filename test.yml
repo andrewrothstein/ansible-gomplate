@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.gomplate
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/gomplate --version
-    register: gomplate_test_output
-  - name: gomplate --version
-    debug:
-      msg: '{{ gomplate_test_output.stdout }}'
+    - name: Executing 'gomplate --version'
+      ansible.builtin.command: gomplate --version
+      changed_when: false
+      register: gomplate_test_output
+    - name: Output from 'gomplate --version'
+      ansible.builtin.debug:
+        msg: '{{ gomplate_test_output.stdout }}'

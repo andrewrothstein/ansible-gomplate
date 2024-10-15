@@ -40,13 +40,7 @@ dl_ver() {
     dl $ver darwin arm64
     dl $ver solaris amd64
     dl $ver windows amd64 .exe
-    dl $ver windows 386.exe
-    dl $ver linux amd64-slim
-    dl $ver linux armv6-slim
-    dl $ver linux armv7-slim
-    dl $ver linux arm64-slim
-    dl $ver darwin amd64-slim
-    dl $ver windows amd64-slim .exe
+    dl $ver windows 386 .exe
 }
 
-dl_ver ${1:-3.11.6}
+dl_ver ${1:-4.1.0}
